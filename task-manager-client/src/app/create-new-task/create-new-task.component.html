@@ -1,0 +1,15 @@
+<div class="form-create-task">
+    <h4>Create new Task:</h4>
+    <div class="form-group">
+        <label>name Task:</label>
+        <input class="form-control" autocomplete="off" name="name Task" [(ngModel)]="newTask.nameTask" />
+    </div>
+    <div class="form-group">
+        <label>description Task:</label>
+        <input class="form-control" autocomplete="off" name="description" [(ngModel)]="newTask.text" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-secondary" (click)="addTask()">Add</button>
+        <button class="btn btn-secondary" (click)="goBack()">go back</button>
+    </div>
+</div>

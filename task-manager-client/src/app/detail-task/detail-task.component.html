@@ -1,0 +1,18 @@
+<div class="detail-task">
+    <h4>Detaill about Task:</h4>
+    <table class="table table-striped">
+        <tr>
+            <th>name Task</th> 
+            <th>description Task</th> 
+            <th>create Data</th>
+        </tr>
+        <tr >
+            <td class="name-task-td" scope="col">{{taskById.nameTask}}</td>
+            <td class="text-task-td" scope="col">{{taskById.text}}</td>
+            <td scope="col">{{taskById.createDate}}</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <button class="btn btn-secondary" (click)="goBack()">go back</button>
+    </div>
+</div>

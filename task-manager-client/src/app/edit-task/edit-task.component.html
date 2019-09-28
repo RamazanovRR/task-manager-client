@@ -1,0 +1,16 @@
+<div class="edit-task">
+    <h4>Edit Task:</h4>
+
+    <div class="form-group">
+        <label>name Task:</label>
+        <input class="form-control" autocomplete="off" name="name Task" [(ngModel)]="editTask.nameTask" />
+    </div>
+    <div class="form-group">
+        <label>description Task:</label>
+        <input class="form-control" autocomplete="off" name="description" [(ngModel)]="editTask.text" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-secondary" (click)="addEditTask()">Edit</button>
+        <button class="btn btn-secondary" (click)="goBack()">go back</button>
+    </div>
+</div>

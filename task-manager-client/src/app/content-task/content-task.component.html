@@ -1,0 +1,29 @@
+<div class="content-task">
+    <h2>Table Task:</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>№</th>
+            <th>name Task</th>
+            <th>description Task</th>
+            <th>create Data</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let task of contentTask let i = index">
+            <td scope="col">{{i + 1}}</td>
+            <td class="name-task-td" scope="col">{{task.nameTask}}</td>
+            <td class='text-task-td' scope="col">{{task.text}}</td>
+            <td scope="col">{{task.createDate}}</td>
+            <td class="td-actions">
+                <a routerLink="/detail/{{task.id}}" class="btn btn-outline-warning btn-spaced">
+                    <button>Detail</button>
+                </a>
+                <a routerLink="/edit/{{task.id}}" class="btn btn-outline-warning btn-spaced">
+                    <button>Edit</button>
+                </a>
+                <a class="btn btn-outline-warning btn-spaced">
+                    <button (click)="deleteTask(task.id, i)">Delete</button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

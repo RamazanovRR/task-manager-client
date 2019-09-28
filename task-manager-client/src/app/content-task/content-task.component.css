@@ -1,0 +1,14 @@
+.content-task {
+    margin: 20px;
+    width: 80%;
+}
+
+.text-task-td {
+    width: 300px;
+    padding: 5px;
+}
+
+.name-task-td {
+    width: 200px;
+    padding: 5px;
+}
