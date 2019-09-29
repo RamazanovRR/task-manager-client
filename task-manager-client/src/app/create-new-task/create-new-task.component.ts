@@ -13,6 +13,7 @@ import { Task } from '../task';
 export class CreateNewTaskComponent implements OnInit {
 
   private newTask: Task = new Task();
+  private infoMessage: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,14 +24,20 @@ export class CreateNewTaskComponent implements OnInit {
   ngOnInit() {
   }
 
-  goBack(): void{
+  goBack(): void {
     this.location.back();
   }
 
   addTask() {
-    this.taskWebApiService.addTask(this.newTask).subscribe();
-    this.newTask.nameTask = "";
-    this.newTask.text = "";
+    if (this.newTask.nameTask === "" || this.newTask.text === "" || this.newTask.nameTask === undefined || this.newTask.text === undefined) {
+      this.infoMessage = "name Task and description Task cannot be empty"
+    } else {
+      this.infoMessage = "You create Task: " + this.newTask.nameTask;
+      this.taskWebApiService.addTask(this.newTask).subscribe();
+      this.newTask.nameTask = "";
+      this.newTask.text = "";
+    }
+
   }
 
 
