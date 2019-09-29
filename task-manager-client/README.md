@@ -22,4 +22,4 @@ npm install
 npm start
 ```
 
-Navigate to `http://localhost:4200/`.
+Navigate to [http://localhost:4200/](http://localhost:4200/).
